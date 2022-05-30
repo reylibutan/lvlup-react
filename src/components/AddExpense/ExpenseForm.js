@@ -6,6 +6,7 @@ const ExpenseForm = () => {
     console.log(event.target.value);
   };
 
+  // test
   return (
     <form>
       <div className="new-expense__controls">
