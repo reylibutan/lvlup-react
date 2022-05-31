@@ -30,7 +30,6 @@ const NewExpense = (props) => {
       <ExpenseForm
         onExpenseFormSubmit={expenseFormSubmitHandler}
         onExpenseFormCancel={expenseFormCancelHandler}
-        onToggleIsFormModeHandler={onClickAddExpenseHandler}
       />
     );
   }
