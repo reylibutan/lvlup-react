@@ -19,13 +19,13 @@ const INITIAL_EXPENSES = [
     id: "e3",
     title: "Apartment Rental",
     amount: 333.33,
-    date: new Date(2022, 3, 3),
+    date: new Date(2021, 3, 3),
   },
   {
     id: "e4",
     title: "Mandatory Provident Fund",
     amount: 444.44,
-    date: new Date(2022, 4, 4),
+    date: new Date(2020, 4, 4),
   },
 ];
 
