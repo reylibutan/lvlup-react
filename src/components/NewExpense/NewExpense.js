@@ -1,11 +1,11 @@
 import React from "react";
 import ExpenseForm from "./ExpenseForm";
-import "./AddExpense.css";
+import "./NewExpense.css";
 
-const AddExpense = (props) => {
+const NewExpense = (props) => {
   const expenseFormSubmitHandler = (expenseFormData) => {
-    const addExpenseData = { ...expenseFormData, id: Math.random().toString() };
-    props.onAddExpense(addExpenseData);
+    const newExpenseData = { id: Math.random().toString(), ...expenseFormData };
+    props.onNewExpense(newExpenseData);
   };
 
   return (
@@ -15,4 +15,4 @@ const AddExpense = (props) => {
   );
 };
 
-export default AddExpense;
+export default NewExpense;
