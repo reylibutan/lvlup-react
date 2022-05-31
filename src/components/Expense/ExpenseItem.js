@@ -5,11 +5,11 @@ import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
-  let suffixCounter = 0;
+  const [suffixCounter, setSuffixCounter] = useState(0);
   const [title, setTitle] = useState(props.title);
-
   const clickHandler = () => {
-    setTitle(title + (suffixCounter + 1));
+    setSuffixCounter(prevSuffixCounter => prevSuffixCounter + 1);
+    setTitle(`${props.title} ${suffixCounter}`);
   };
 
   return (
