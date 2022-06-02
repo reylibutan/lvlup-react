@@ -1,23 +1,23 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import styles from "./UserForm.module.css";
 
 const UserForm = (props) => {
-  const [userName, setUserName] = useState("");
-  const [age, setAge] = useState("");
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
 
   const clearForm = () => {
-    setUserName("");
-    setAge("");
+    nameInputRef.current.value = ""
+    ageInputRef.current.value = ""
   };
 
   const onSubmitHandler = (event) => {
     const newUser = {
       id: Math.random() * 100,
-      userName: userName,
-      age: age,
+      userName: nameInputRef.current.value,
+      age: ageInputRef.current.value,
     };
 
-    props.onNewUserHandler(newUser)
+    props.onNewUserHandler(newUser);
     clearForm();
 
     event.preventDefault();
@@ -28,23 +28,11 @@ const UserForm = (props) => {
       <div className={styles.controls}>
         <div className={styles.control}>
           <label>Username</label>
-          <input
-            type="text"
-            value={userName}
-            onChange={(e) => {
-              setUserName(e.target.value);
-            }}
-          />
+          <input type="text" ref={nameInputRef} />
         </div>
         <div className={styles.control}>
           <label>Age (Years)</label>
-          <input
-            type="number"
-            value={age}
-            onChange={(e) => {
-              setAge(e.target.value);
-            }}
-          />
+          <input type="number" ref={ageInputRef} />
         </div>
       </div>
       <div className={styles.actions}>
