@@ -1,0 +1,61 @@
+.controls {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.control {
+  margin-bottom: 00.5rem;
+}
+
+.control label {
+  font-size: 0.8rem;
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #606060;
+}
+
+.control input {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  appearance: none;
+  border-radius: 4px;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.control input:focus{
+  color: #212529;
+  background-color: #fff;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.control input:hover {
+  box-shadow: rgb(231 238 236) 0px 0px 0px 3px;
+}
+
+.actions button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 14px;
+  border-bottom: 4px solid #2b6cb0;
+  font-weight: 700;
+  color: white;
+  line-height: 26px;
+}
+
+.actions button:hover {
+  opacity: 0.9;
+}
